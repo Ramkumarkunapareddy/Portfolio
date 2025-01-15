@@ -24,8 +24,15 @@
 }
 
 .resume-name {
-    width: 100%;
-    justify-items: center;
+    display: inline-block;
+    width: 50%;
+    justify-items: flex-start;
+    font-size: 2rem !important;
+    font-weight: 900;
+    letter-spacing: 0.2rem;
+    color: #54B689;
+    text-transform: uppercase !important;
+    align-items: center;
 }
 
 .tech-icon {
@@ -52,9 +59,15 @@
   }
 
   .tech-icon1 {
-    height: 14px;
-    width: 14px;
-    margin-right: 2px;
+    height: 16px;
+    width: 16px;
+    margin-right: 8px;
+    display: inline-block;
+    vertical-align: middle;
+    /* fill: #555555;
+     */
+     color: #555555;
+    /* transition: fill 0.3s ease; */
 }
 
   .download-btn:hover {
@@ -63,20 +76,24 @@
 
   .resume-details{
     display: flex;
-    flex-direction: column;
-    background-color: #ffffff; /* White background */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); /* Shadow effect */
-    padding: 20px; /* Inner spacing */
-    margin: 5vh 5vw;
-    transition: box-shadow 0.3s ease; /* Smooth hover effect */
-    height: auto;
-    justify-content: center;
+    /* flex-direction: column; */
+    
+    justify-content: space-between;
     align-items: center;
   }
 
   /* Add a hover effect (optional) */
-.resume-details:hover {
+.resume-section {
+  background-color: #ffffff; /* White background */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); /* Shadow effect */
+  padding: 25px; /* Inner spacing */
+  margin: 5vh 5vw;
+  transition: box-shadow 0.3s ease; /* Smooth hover effect */
+  height: auto;
+  }
+
+  .resume-section:hover {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1);
   }
 
@@ -84,7 +101,7 @@
     margin-top: 10px; /* Add spacing below the name */
     font-size: 16px; /* Adjust text size */
     color: #333; /* Text color */
-    display: flex;
+    display: inline-block;
     align-items: center; /* Align icon and text */
     padding: 4px 0px;
     justify-content: space-around;
@@ -92,13 +109,121 @@
 
   .icon-link {
     text-decoration: none; /* Remove underline */
-    color: inherit; /* Inherit the text color */
+    color: #555555; /* Inherit the text color */
     display: flex; /* Ensure alignment between icon and text */
     align-items: center;
     margin-left: 20px;
+    margin-top: 4px;
+    margin-bottom: 4px;
   }
   
-  .icon-link:hover {
-    color: #007bff; /* Change color on hover (optional) */
-    cursor: pointer;
-  }
+  /* Hover effect */
+.icon-link:hover {
+  color: #15704c; /* Change text and icon color (e.g., blue) */
+}
+
+.resume-tagline {
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: #555555;
+  text-transform: none !important;
+  letter-spacing: 0rem;
+}
+
+hr {
+  margin: 0.2rem;
+  border-color: rgba(0, 0, 0, 0.08);
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  /* border: 0; */
+  /* opacity: 0; */
+}
+
+.resume-summary ol {
+  padding-left: 20px;
+  margin: 0;
+  list-style-type: circle;
+}
+
+.resume-summary ol li {
+  margin-bottom: 10px;
+  line-height: 1.2;
+  color: #555;
+}
+
+.resume-summary ol li::marker {
+  color: #555555; /* Stylish bullet points */
+}
+
+.section-title{
+  color: #555555;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+.technical-skill {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skill-column {
+  display: inline-block;
+  /* width: 15%; */
+  justify-items: flex-start;
+}
+
+.skill-column ol {
+  padding-left: 20px;
+  margin: 0;
+  list-style-type: circle;
+}
+
+.skill-column ol li {
+  margin-bottom: 0px;
+  line-height: 1.2;
+  color: #555;
+}
+
+.skill-column ol li::marker {
+  color: #555555; /* Stylish bullet points */
+}
+
+.project-title{
+  display: flex;
+  justify-content: space-between;
+}
+
+.title-content{
+  color: #555555;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.project-detail{
+  margin-top: 5px;
+}
+
+.project-detail ol {
+  padding-left: 20px;
+  margin: 0;
+  list-style-type: circle;
+}
+
+.project-detail ol li {
+  margin-bottom: 10px;
+  line-height: 1.2;
+  color: #555;
+}
+
+.project-detail ol li::marker {
+  color: #555555; /* Stylish bullet points */
+}
+
+.project-tech {
+  color: #555555;
+  font-weight: normal;
+}
+
+
+/* .navigation-link */
