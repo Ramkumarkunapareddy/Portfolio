@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent {
+  contactName: string = "";
+  contactEmail: string = "";
+
+  constructor() {
+
+  }
+
+  ngOnInit(): void {}
 
 }
