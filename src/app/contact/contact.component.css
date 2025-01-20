@@ -17,6 +17,7 @@
 }
 
 .contact-h1{
+    display: flex;
     justify-items   : center;
     color: black;
 }
@@ -63,13 +64,17 @@
 
 .col-md-6{
     display: inline-block;
-    width: 45%;
-    margin: 0 1vw;
+    width: 48%;
+    /* margin: 0 1vw; */
 }
 
 .col-md-12 {
     justify-items: center;
 }
+
+/* .col-md-1 {
+    width: 2%;
+} */
 
 .custom-input {
     width: 100%;          /* Makes the input fill the parent div */
