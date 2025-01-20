@@ -11,6 +11,8 @@ import { ResumeComponent } from './resume/resume.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule, // Required for Toastr animations
+    ToastrModule.forRoot()   // ToastrModule added with default configuration
   ],
   providers: [],
   bootstrap: [AppComponent]

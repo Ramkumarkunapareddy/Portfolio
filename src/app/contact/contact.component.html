@@ -112,8 +112,28 @@
           class="form-control custom-input"
           id="emial"
           [(ngModel)]="contactEmail"
-          placeholder="Add"
+          placeholder="Subject or Topic Title"
         />
+      </div>
+
+      <div class="col-md-12 custom-title">
+        <textarea
+          class="form-control custom-input detail"
+          id="message"
+          [(ngModel)]="contactDescription"
+          placeholder="Enter your message"
+        ></textarea>
+      </div>
+
+      <div class="col-md-12">
+        <button
+          class="form-control Tab hire-me-btn"
+          tabindex="4"
+          type="button"
+          (click)="sendMessage()"
+        >
+          Send Now
+        </button>
       </div>
     </div>
   </section>

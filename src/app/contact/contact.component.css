@@ -17,9 +17,9 @@
 }
 
 .contact-h1{
-    display: flex;
     justify-items   : center;
     color: black;
+    text-align: center;
 }
 
 .icon-link {
@@ -95,4 +95,36 @@
   .custom-title {
     margin: 3vh 0;
   }
+
+  .detail {
+    height: 30vh;          /* Sets the height of the text area */
+    resize: none;          /* Prevents users from resizing the text area */
+    padding: 10px;         /* Adds inner padding for better readability */
+    font-size: 16px;       /* Adjusts font size */
+    box-sizing: border-box; /* Ensures padding doesn't affect dimensions */
+    overflow-y: auto;      /* Enables scrolling for large content */
+    vertical-align: top;   /* Ensures text starts from the top */
+  }
+
+  .custom-input::placeholder {
+    font-family: 'Times New Roman', serif; /* Set Times New Roman */
+    font-size: 16px;                       /* Adjust font size */
+    color: #888;                           /* Set placeholder color */
+    font-style: normal;                    /* Optional: Italic, normal, etc. */
+}
+
+.hire-me-btn {
+    border-radius: 5px;
+    border: 0px !important;
+    background-color: #54B689;
+    padding: 12px;
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+  }
+
+  .hire-me-btn:hover {
+    background-color: #297451;
+  }
+
   
