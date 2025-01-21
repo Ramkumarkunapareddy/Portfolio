@@ -1,0 +1,22 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  app-root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the app takes full height of the viewport */
+  }
+  
+  main {
+    flex: 1; /* Pushes the footer to the bottom when content is insufficient */
+  }
+  
+  /* footer {
+    text-align: center;
+    background-color: white;
+    padding: 10px 0;
+    border-top: 1px solid #ccc;
+  } */

@@ -13,6 +13,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ToastrModule } from 'ngx-toastr';
     AboutComponent,
     ContactComponent,
     ResumeComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
