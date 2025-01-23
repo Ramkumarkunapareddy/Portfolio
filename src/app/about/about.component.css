@@ -352,7 +352,7 @@ h2 {
 
 @media (min-width: 965px){
     .p-lg-5 {
-        padding: 3rem !important;
+        padding: 1rem 3rem !important;
     }
 }
 
@@ -363,7 +363,7 @@ h2 {
     }
 
     .p-lg-5 {
-        padding: 3rem !important;
+        padding: 1rem 3rem !important;
     }
 
     .mb-lg-0 {
@@ -390,6 +390,35 @@ h2 {
         max-width: 1320px;
     }
 }
+
+.custom-btn {
+    background-color: #007bff; /* Set your desired background color */
+    border: none;
+    border-radius: 8px; /* Adjust border radius */
+    padding: 10px 15px; /* Adjust padding */
+    display: flex;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .custom-btn:hover {
+    background-color: #0056b3; /* Darken background on hover */
+  }
+
+  .resume-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 5vh;
+  }
+
+  .nav-item {
+    list-style: none;
+  }
+
+
 
 
 
