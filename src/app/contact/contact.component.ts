@@ -10,6 +10,7 @@ export class ContactComponent {
   contactName: string = '';
   contactEmail: string = '';
   contactDescription: string = '';
+  contactTopic: string = '';
 
   constructor(private toastr: ToastrService) {}
 
@@ -38,6 +39,17 @@ export class ContactComponent {
       return;
     } else if (!this.validateEmail(this.contactEmail)) {
       this.toastr.error('Please enter a valid email format');
+      return;
+    }
+
+    //valid title
+    if (
+      this.contactTopic == '' ||
+      this.contactTopic == null ||
+      this.contactTopic == undefined ||
+      this.contactTopic.trim() == ''
+    ) {
+      this.toastr.error('Please provide the subject');
       return;
     }
 
