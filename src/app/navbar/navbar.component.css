@@ -1,6 +1,6 @@
 * {
   font-family: 'Times New Roman', serif; /* Set Times New Roman */
-  font-size: 16px;                       /* Adjust font size */
+  /* font-size: 16px;                       Adjust font size */
 }
 
 
@@ -22,7 +22,7 @@
 
 .header .profile-name{
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 16px !important;
 }
 
 /* Profile Section */
@@ -43,7 +43,7 @@
 }
 
 .profile-description {
-  font-size: 1rem;
+  font-size: 16px;
   margin-bottom: 1rem !important;
   justify-content: center !important;
   box-sizing: border-box;

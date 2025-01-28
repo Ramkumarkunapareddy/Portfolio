@@ -42,6 +42,7 @@
     display: flex;
     justify-content: center;
     padding: 1vh 0;
+    
 }
 
 .icon1 {
@@ -49,6 +50,8 @@
     width: 24px;
     margin-right: 8px;
     display: inline-block;
+    /* fill: #54B689; */
+    color: #54B689; 
 }
 
 .contact-info-section{

@@ -10,35 +10,13 @@ import html2canvas from 'html2canvas';
 })
 export class ResumeComponent {
   downloadResume() {
-    const element = document.querySelector('.resume-section') as HTMLElement;
+    // Path to the pre-generated PDF in the assets folder
+    const pdfUrl = './assets/CV_Jalpesh_Vala.pdf';
 
-    // if (element) {
-    //   html2canvas(element).then((canvas) => {
-    //     const imgData = canvas.toDataURL('image/png');
-    //     const pdf = new jsPDF('p', 'mm', 'a4');
-    //     const pdfWidth = pdf.internal.pageSize.getWidth();
-    //     const pdfHeight = (canvas.height * pdfWidth) / canvas.width;
-
-    //     pdf.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight);
-    //     pdf.save('resume.pdf');
-    //   });
-    // } else {
-    //   console.error('Resume section not found');
-    // }
-
-    if (element) {
-      const pdf = new jsPDF('p', 'mm', 'a4');
-
-      pdf.html(element, {
-        callback: function (doc) {
-          doc.save('resume.pdf');
-        },
-        x: 10,
-        y: 10,
-        width: 190, // Adjust to fit A4 width
-      });
-    } else {
-      console.error('Resume section not found');
-    }
+    // Create a link element and trigger download
+    const link = document.createElement('a');
+    link.href = pdfUrl;
+    link.download = 'Resume_Jalpesh_Vala.pdf'; // The name of the file for the user
+    link.click();
   }
 }

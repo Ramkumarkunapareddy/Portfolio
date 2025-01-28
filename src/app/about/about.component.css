@@ -237,6 +237,7 @@ h2 {
     font-size: 2rem;
     position: relative;
     padding-left: 2%;
+    text-align: justify;
 }
 
 
@@ -417,6 +418,12 @@ h2 {
 
   .nav-item {
     list-style: none;
+  }
+
+  .nav-label {
+    text-decoration: none;
+    color: white !important;
+    font-weight: bold;
   }
 
 
