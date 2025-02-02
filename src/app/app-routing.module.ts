@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: 'resume', component: ResumeComponent },
   { path: 'portfolio', component: PortfolioComponent },
   // Catch all other invalid routes and redirect to login
-  // { path: '**', redirectTo: '/about' }
+  { path: '**', redirectTo: '/about' }
 ];
 
 @NgModule({
