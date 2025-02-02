@@ -4,6 +4,8 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { ResumeComponent } from './resume/resume.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+
 
 const routes: Routes = [
   { path: '', redirectTo: '/about', pathMatch: 'full' }, // Redirect default path to About
@@ -17,6 +19,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }]
 })
 export class AppRoutingModule { }
