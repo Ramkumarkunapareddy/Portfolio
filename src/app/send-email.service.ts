@@ -12,7 +12,6 @@ export class SendEmailService {
   constructor(private http: HttpClient) { }
 
   SendUserEntrData(userName: string, topic: string, message: string, useremail: string) {
-    alert("Yes");
     return this.http.get(`${this.rootURL}/Email?username=${userName}&topic=${topic}&message=${message}&useremail=${useremail}`);
   }
 
