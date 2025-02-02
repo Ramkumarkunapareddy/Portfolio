@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import jsPDF from 'jspdf';
-import html2canvas from 'html2canvas';
 // import jsPDF from 'jspdf';
 
 @Component({

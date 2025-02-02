@@ -4,6 +4,12 @@
     color: #4F4F4F;
 }
 
+::ng-deep .toast {
+  font-size: 16px !important;
+  font-family: 'Times New Roman', serif; /* Set Times New Roman */
+}
+
+
 .header-section {
     display: flex;
     justify-content: center;

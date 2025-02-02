@@ -14,6 +14,7 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { FooterComponent } from './footer/footer.component';
+import { HttpClientModule } from '@angular/common/http'; // <-- Import this module
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { FooterComponent } from './footer/footer.component';
     ResumeComponent,
     PortfolioComponent,
     FooterComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -31,7 +33,8 @@ import { FooterComponent } from './footer/footer.component';
     FontAwesomeModule,
     FormsModule,
     BrowserAnimationsModule, // Required for Toastr animations
-    ToastrModule.forRoot()   // ToastrModule added with default configuration
+    ToastrModule.forRoot() ,  // ToastrModule added with default configuration
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
