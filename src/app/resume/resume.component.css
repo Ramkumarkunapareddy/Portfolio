@@ -119,7 +119,7 @@
   
   /* Hover effect */
 .icon-link:hover {
-  color: #15704c; /* Change text and icon color (e.g., blue) */
+  color: #54B689; 
 }
 
 .resume-tagline {
@@ -225,6 +225,12 @@ hr {
   color: #555555;
   font-weight: normal;
 }
+
+a, a:visited, a:hover, a:active, a:focus {
+  color: #555555 !important;
+  text-decoration: none !important;
+}
+
 
 
 /* .navigation-link */

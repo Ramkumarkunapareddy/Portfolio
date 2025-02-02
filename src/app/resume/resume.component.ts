@@ -7,6 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./resume.component.css'],
 })
 export class ResumeComponent {
+
+  // isRefersh: boolean = false;
+  // ngOnInit(): void{
+  //   if (!this.isRefersh){
+  //     window.location.reload();
+  //   }
+   
+  // }
+
   downloadResume() {
     // Path to the pre-generated PDF in the assets folder
     const pdfUrl = './assets/CV_Jalpesh_Vala.pdf';
