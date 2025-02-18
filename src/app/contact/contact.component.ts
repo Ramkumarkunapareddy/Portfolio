@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 import { SendEmailService } from '../send-email.service';
+import emailjs from '@emailjs/browser';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-contact',
@@ -14,9 +16,9 @@ export class ContactComponent {
   contactTopic: string = '';
   toastrTimeOut: number = 15000;
 
-  constructor(private toastr: ToastrService, private emaiService: SendEmailService) {}
+  constructor(private toastr: ToastrService, private emaiService: SendEmailService) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   sendMessage() {
     // Validate contactName
@@ -66,42 +68,86 @@ export class ContactComponent {
       return;
     }
 
-    this.emaiService.SendUserEntrData(
-      this.contactName,
-      this.contactTopic,
-      this.contactDescription,
-      this.contactEmail
-    ).subscribe({
-      next: () => {
+    // Call sendEmail() with validated data
+    this.sendEmail({
+      name: this.contactName,
+      email: this.contactEmail,
+      title: this.contactTopic,
+      message: this.contactDescription
+    });
+
+    // this.emaiService.SendUserEntrData(
+    //   this.contactName,
+    //   this.contactTopic,
+    //   this.contactDescription,
+    //   this.contactEmail
+    // ).subscribe({
+    //   next: () => {
+    //     this.toastr.success(
+    //       `Your message has been successfully sent to Jalpesh.`,
+    //       'Message Sent Successfully',
+    //       { timeOut: this.toastrTimeOut }
+    //     );
+
+    //     this.toastr.info(
+    //       `Jalpesh will get back to you at the earliest convenience to discuss the topic "${this.contactTopic}". Thank you!`,
+    //       'Message Acknowledged',
+    //       { timeOut: this.toastrTimeOut }
+    //     );
+    //   },
+    //   error: (error) => {
+    //     console.error('Error sending the message:', error);
+
+    //     this.toastr.error(
+    //       `We apologize for the inconvenience. There is an issue with the message service.`,
+    //       'Message Sending Failed',
+    //       { timeOut: this.toastrTimeOut }
+    //     );
+
+    //     this.toastr.info(
+    //       `You can reach out to Jalpesh directly via social media or visit the resume page for contact details.`,
+    //       'Alternative Contact',
+    //       { timeOut: this.toastrTimeOut }
+    //     );
+    //   },
+    // });
+
+  }
+
+  sendEmail(userMessage: any) {
+
+    emailjs.send( environment.emailJS.serviceID,
+      environment.emailJS.templateID,
+      userMessage,
+      environment.emailJS.publicKey)
+      .then((response) => {
+        console.log('Email sent successfully!', response);
         this.toastr.success(
           `Your message has been successfully sent to Jalpesh.`,
           'Message Sent Successfully',
           { timeOut: this.toastrTimeOut }
         );
-    
+
         this.toastr.info(
           `Jalpesh will get back to you at the earliest convenience to discuss the topic "${this.contactTopic}". Thank you!`,
           'Message Acknowledged',
           { timeOut: this.toastrTimeOut }
         );
-      },
-      error: (error) => {
-        console.error('Error sending the message:', error);
-    
+      })
+      .catch((error) => {
+        console.error('Error sending email:', error);
         this.toastr.error(
           `We apologize for the inconvenience. There is an issue with the message service.`,
           'Message Sending Failed',
           { timeOut: this.toastrTimeOut }
         );
-    
+
         this.toastr.info(
           `You can reach out to Jalpesh directly via social media or visit the resume page for contact details.`,
           'Alternative Contact',
           { timeOut: this.toastrTimeOut }
         );
-      },
-    });
-    
+      });
   }
 
   // Email validation helper method
