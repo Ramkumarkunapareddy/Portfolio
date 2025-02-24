@@ -16,9 +16,9 @@ export class ContactComponent {
   contactTopic: string = '';
   toastrTimeOut: number = 15000;
 
-  constructor(private toastr: ToastrService, private emaiService: SendEmailService) { }
+  constructor(private toastr: ToastrService) {}
 
-  ngOnInit(): void { }
+  ngOnInit(): void {}
 
   sendMessage() {
     // Validate contactName
@@ -68,7 +68,6 @@ export class ContactComponent {
       return;
     }
 
-    // Call sendEmail() with validated data
     this.sendEmail({
       name: this.contactName,
       email: this.contactEmail,
@@ -88,7 +87,7 @@ export class ContactComponent {
     //       'Message Sent Successfully',
     //       { timeOut: this.toastrTimeOut }
     //     );
-
+    
     //     this.toastr.info(
     //       `Jalpesh will get back to you at the earliest convenience to discuss the topic "${this.contactTopic}". Thank you!`,
     //       'Message Acknowledged',
@@ -97,13 +96,13 @@ export class ContactComponent {
     //   },
     //   error: (error) => {
     //     console.error('Error sending the message:', error);
-
+    
     //     this.toastr.error(
     //       `We apologize for the inconvenience. There is an issue with the message service.`,
     //       'Message Sending Failed',
     //       { timeOut: this.toastrTimeOut }
     //     );
-
+    
     //     this.toastr.info(
     //       `You can reach out to Jalpesh directly via social media or visit the resume page for contact details.`,
     //       'Alternative Contact',
@@ -111,7 +110,7 @@ export class ContactComponent {
     //     );
     //   },
     // });
-
+    
   }
 
   sendEmail(userMessage: any) {
@@ -123,13 +122,13 @@ export class ContactComponent {
       .then((response) => {
         console.log('Email sent successfully!', response);
         this.toastr.success(
-          `Your message has been successfully sent to Jalpesh.`,
+          `Your message has been successfully sent to Ramkumar.K`,
           'Message Sent Successfully',
           { timeOut: this.toastrTimeOut }
         );
 
         this.toastr.info(
-          `Jalpesh will get back to you at the earliest convenience to discuss the topic "${this.contactTopic}". Thank you!`,
+          `Ramkumar.K will get back to you at the earliest convenience to discuss the topic "${this.contactTopic}". Thank you!`,
           'Message Acknowledged',
           { timeOut: this.toastrTimeOut }
         );
@@ -143,7 +142,7 @@ export class ContactComponent {
         );
 
         this.toastr.info(
-          `You can reach out to Jalpesh directly via social media or visit the resume page for contact details.`,
+          `You can reach out to Ramkumar.K directly via social media or visit the resume page for contact details.`,
           'Alternative Contact',
           { timeOut: this.toastrTimeOut }
         );

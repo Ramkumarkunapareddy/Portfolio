@@ -1,139 +1,138 @@
 .main-wrapper {
-    margin-left: 19vw;
-    background: #fff;
-    color: #4F4F4F;
+  margin-left: 19vw;
+  background: #fff;
+  color: #4F4F4F;
 }
 
 ::ng-deep .toast {
-  font-size: 16px !important;
-  font-family: 'Times New Roman', serif; /* Set Times New Roman */
+font-size: 16px !important;
+font-family: 'Times New Roman', serif; /* Set Times New Roman */
 }
 
 
 .header-section {
-    display: flex;
-    justify-content: center;
-    background-color: #fafafa;
-    align-items: center;
-    padding: 4vh 0vw;
+  display: flex;
+  justify-content: center;
+  background-color: #fafafa;
+  align-items: center;
+  padding: 4vh 0vw;
 }
 
 .contact-header {
-    width: 50%;
+  width: 50%;
 }
 
 .contact-h1{
-    justify-items   : center;
-    color: black;
-    text-align: center;
+  justify-items   : center;
+  color: black;
+  text-align: center;
 }
 
 .icon-link {
-    text-decoration: none; /* Remove underline */
-    color: #4F4F4F !important;
-  }
-  
-  /* Hover effect */
+  text-decoration: none; /* Remove underline */
+  color: #4F4F4F !important;
+}
+
+/* Hover effect */
 .icon-link:hover {
-  color: #15704c !important; /* Change text and icon color (e.g., blue) */
+color: #15704c !important; /* Change text and icon color (e.g., blue) */
 }
 
 .contact-q1 {
-    text-align: center;
-    line-height: 1.6;
-    margin-bottom: 2vh;
+  text-align: center;
+  line-height: 1.6;
+  margin-bottom: 2vh;
 }
 
 .social-icon {
-    display: flex;
-    justify-content: center;
-    padding: 1vh 0;
-    
+  display: flex;
+  justify-content: center;
+  padding: 1vh 0;
+  
 }
 
 .icon1 {
-    height: 24px;
-    width: 24px;
-    margin-right: 8px;
-    display: inline-block;
-    /* fill: #54B689; */
-    color: #54B689; 
+  height: 24px;
+  width: 24px;
+  margin-right: 8px;
+  display: inline-block;
+  /* fill: #54B689; */
+  color: #54B689; 
 }
 
 .contact-info-section{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 4vh 0vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4vh 0vw;
 }
 
 .contact-info {
-    width: 70%;
+  width: 70%;
 }
 
 .col-md-6{
-    display: inline-block;
-    width: 48%;
-    /* margin: 0 1vw; */
+  display: inline-block;
+  width: 48%;
+  /* margin: 0 1vw; */
 }
 
 .col-md-12 {
-    justify-items: center;
+  justify-items: center;
 }
 
 /* .col-md-1 {
-    width: 2%;
+  width: 2%;
 } */
 
 .custom-input {
-    width: 100%;          /* Makes the input fill the parent div */
-    height: 32px;         /* Adjust height as needed */
-    border-radius: 8px;   /* Adds rounded corners */
-    border: 1px solid #ccc; /* Adds a border with light gray color */
-    padding: 10px;        /* Adds inner padding for better text visibility */
-    font-size: 16px;      /* Adjusts font size for better readability */
-    box-sizing: border-box; /* Ensures padding doesn't affect width */
-  }
-  
-  .custom-input:focus {
-    outline: none;        /* Removes default outline on focus */
-    border-color: #007bff; /* Highlights border when focused */
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Adds subtle shadow on focus */
-  }
+  width: 100%;          /* Makes the input fill the parent div */
+  height: 32px;         /* Adjust height as needed */
+  border-radius: 8px;   /* Adds rounded corners */
+  border: 1px solid #ccc; /* Adds a border with light gray color */
+  padding: 10px;        /* Adds inner padding for better text visibility */
+  font-size: 16px;      /* Adjusts font size for better readability */
+  box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
 
-  .custom-title {
-    margin: 3vh 0;
-  }
+.custom-input:focus {
+  outline: none;        /* Removes default outline on focus */
+  border-color: #007bff; /* Highlights border when focused */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Adds subtle shadow on focus */
+}
 
-  .detail {
-    height: 30vh;          /* Sets the height of the text area */
-    resize: none;          /* Prevents users from resizing the text area */
-    padding: 10px;         /* Adds inner padding for better readability */
-    font-size: 16px;       /* Adjusts font size */
-    box-sizing: border-box; /* Ensures padding doesn't affect dimensions */
-    overflow-y: auto;      /* Enables scrolling for large content */
-    vertical-align: top;   /* Ensures text starts from the top */
-  }
+.custom-title {
+  margin: 3vh 0;
+}
 
-  .custom-input::placeholder {
-    font-family: 'Times New Roman', serif; /* Set Times New Roman */
-    font-size: 16px;                       /* Adjust font size */
-    color: #888;                           /* Set placeholder color */
-    font-style: normal;                    /* Optional: Italic, normal, etc. */
+.detail {
+  height: 30vh;          /* Sets the height of the text area */
+  resize: none;          /* Prevents users from resizing the text area */
+  padding: 10px;         /* Adds inner padding for better readability */
+  font-size: 16px;       /* Adjusts font size */
+  box-sizing: border-box; /* Ensures padding doesn't affect dimensions */
+  overflow-y: auto;      /* Enables scrolling for large content */
+  vertical-align: top;   /* Ensures text starts from the top */
+}
+
+.custom-input::placeholder {
+  font-family: 'Times New Roman', serif; /* Set Times New Roman */
+  font-size: 16px;                       /* Adjust font size */
+  color: #888;                           /* Set placeholder color */
+  font-style: normal;                    /* Optional: Italic, normal, etc. */
 }
 
 .hire-me-btn {
-    border-radius: 5px;
-    border: 0px !important;
-    background-color: #54B689;
-    padding: 12px;
-    font-size: 16px;
-    color: white;
-    font-weight: bold;
-  }
+  border-radius: 5px;
+  border: 0px !important;
+  background-color: #54B689;
+  padding: 12px;
+  font-size: 16px;
+  color: white;
+  font-weight: bold;
+}
 
-  .hire-me-btn:hover {
-    background-color: #297451;
-  }
+.hire-me-btn:hover {
+  background-color: #297451;
+}
 
-  

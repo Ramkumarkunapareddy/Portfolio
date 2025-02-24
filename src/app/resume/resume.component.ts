@@ -18,12 +18,12 @@ export class ResumeComponent {
 
   downloadResume() {
     // Path to the pre-generated PDF in the assets folder
-    const pdfUrl = './assets/CV_Jalpesh_Vala.pdf';
+    const pdfUrl = './assets/CV_RamKumar.pdf';
 
     // Create a link element and trigger download
     const link = document.createElement('a');
     link.href = pdfUrl;
-    link.download = 'Resume_Jalpesh_Vala.pdf'; // The name of the file for the user
+    link.download = 'Resume_RamKumar.pdf'; // The name of the file for the user
     link.click();
   }
 }
